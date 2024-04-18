@@ -77,8 +77,7 @@ func DownloadMod(modURL string, modName string) error {
 func downloadFile(url string, filename string) error {
 	response, err := http.Get(url)
 	if response.StatusCode != 200 {
-		return fmt.Errorf("failed to download file: %v", response.Status)
-
+		return fmt.Errorf("failed to download file: %s", response.Status)
 	}
 	if err != nil {
 		return err
