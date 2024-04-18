@@ -68,6 +68,7 @@ func DownloadForgeInstaller(version string) error {
 
 func DownloadMod(modName string) error {
 	// TODO NEED API KEY
+	return nil
 }
 
 func downloadFile(url string, filename string) error {
