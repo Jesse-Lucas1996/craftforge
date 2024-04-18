@@ -10,7 +10,6 @@ import (
 
 func main() {
 	forgeVersion := flag.String("forge", "", "Forge version to install")
-	modURL := flag.String("mod", "", "URL of mod to download")
 	modName := flag.String("modname", "mod", "Name of mod file")
 
 	flag.Parse()
@@ -25,8 +24,8 @@ func main() {
 		os.Exit(1)
 	}
 
-	if *modURL != "" {
-		if err := downloader.DownloadMod(*modURL, *modName); err != nil {
+	if *modName != "" {
+		if err := downloader.DownloadMod(*modName); err != nil {
 			fmt.Printf("Error downloading mod: %v\n", err)
 			os.Exit(1)
 		}

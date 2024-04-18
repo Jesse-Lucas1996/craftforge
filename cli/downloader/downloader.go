@@ -66,10 +66,11 @@ func DownloadForgeInstaller(version string) error {
 	return nil
 }
 
-func DownloadMod(modURL string, modName string) error {
-	err := downloadFile(modURL, modName+".jar")
+func DownloadMod(modName string) error {
+	url := fmt.Sprintf("https://www.curseforge.com/minecraft/modpacks/%s/download/", modName)
+	err := downloadFile(url, "mod.zip")
 	if err != nil {
-		return fmt.Errorf("failed to download mod: %v", err)
+		return fmt.Errorf("cunt locked us out: %v", err)
 	}
 	return nil
 }
