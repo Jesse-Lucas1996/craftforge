@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/JesseLucas1996/craftforge/cli/internal/downloader"
+	"github.com/Jesse-Lucas1996/craftforge/cli/internal/downloader"
 )
 
 func main() {
