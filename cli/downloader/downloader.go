@@ -1,4 +1,3 @@
-// internal/downloader/downloader.go
 package downloader
 
 import (

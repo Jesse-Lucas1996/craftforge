@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Jesse-Lucas1996/craftforge/cli/internal/downloader"
+	"github.com/Jesse-Lucas1996/craftforge/cli/downloader"
 )
 
 func main() {
@@ -25,7 +25,7 @@ func main() {
 	}
 
 	if *modURL != "" {
-		if err := downloader.DownloadMod(*modURL); err != nil {
+		if err := downloader.DownloadMod(*modURL, *forgeVersion); err != nil {
 			fmt.Printf("Error downloading mod: %v\n", err)
 			os.Exit(1)
 		}
